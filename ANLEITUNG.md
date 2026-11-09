@@ -5,20 +5,18 @@ Die Schüler:innen brauchen nur den Link: kein Code, kein Login, kein Name.
 
 ## Inhalt des Ordners
 
-- `public/index.html` – die Unterrichtsseite
-- `public/qrcode.js` – erzeugt den QR-Code für den Beamer
-- `netlify/functions/api.mjs` – sammelt die Abgaben anonym (Netlify Blobs)
-- `netlify.toml`, `package.json` – Konfiguration für Netlify
+Alle Dateien liegen flach nebeneinander, es gibt keine Unterordner:
+
+- `index.html` – die Unterrichtsseite
+- `api.mjs` – sammelt die Abgaben anonym (Netlify Blobs)
+- `netlify.toml`, `package.json` – Konfiguration für Netlify. Beim Deploy legt Netlify die nötigen Ordner selbst an.
 
 ## Einmalig online stellen (ca. 15 Minuten, am Computer)
 
 1. **GitHub-Konto** anlegen auf github.com (kostenlos).
 2. Oben rechts **„+“ → „New repository“**, Name z. B. `sinnsuche`, „Create repository“.
-3. Auf der neuen Seite **„uploading an existing file“** anklicken.
-   Diesen Ordner öffnen und **seinen Inhalt** ins Browserfenster ziehen:
-   die Ordner `public` und `netlify` sowie `netlify.toml` und `package.json`.
-   Wichtig: Die beiden Ordner müssen als Ordner ankommen (in Chrome oder Edge klappt das per Drag & Drop).
-   Dann unten **„Commit changes“**.
+3. Auf der neuen Seite **„uploading an existing file“** anklicken, alle Dateien dieses Ordners
+   ins Browserfenster ziehen und unten **„Commit changes“** klicken.
 4. Auf app.netlify.com: **„Add new project“ → „Import an existing project“ → GitHub**,
    Zugriff erlauben, das Repository `sinnsuche` wählen, **„Deploy“**.
 5. Fertig. Den Seitennamen (z. B. `sinnsuche-roeka.netlify.app`) und die Lehrkraft-PIN

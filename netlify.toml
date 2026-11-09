@@ -1,5 +1,7 @@
+# Alle Dateien liegen flach im Repository. Beim Deploy legt Netlify die Ordner selbst an.
 [build]
-  publish = "public"
+  command = "mkdir -p dist netlify/functions && cp index.html dist/ && cp api.mjs netlify/functions/api.mjs"
+  publish = "dist"
   functions = "netlify/functions"
 
 [functions]
