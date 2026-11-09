@@ -81,6 +81,7 @@ button,input,textarea,select{font:inherit;color:inherit}
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 .hero h1{font-size:clamp(2.8rem,8vw,6.2rem);font-weight:800;letter-spacing:-.03em;font-variation-settings:"opsz" 96}
 .hero h1 em{font-style:normal;color:var(--sun-ink);position:relative}
+.hero h1 .kuchen{display:block;width:fit-content;margin-top:.2em;font-size:.5em;font-weight:600;letter-spacing:0;color:var(--muted);transform:rotate(-2deg);transform-origin:left center}
 .hero .lead{margin-top:20px;font-size:1.15rem;max-width:34em;color:var(--muted)}
 .hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
 .tag{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);background:var(--surface)}
@@ -129,6 +130,8 @@ details summary{cursor:pointer;font-weight:700}
 .st-num{font-family:var(--f-display);font-weight:800;font-size:clamp(4.5rem,13vw,9rem);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--sun);letter-spacing:-.04em}
 .st-head h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.02em}
 .st-head p{margin-top:8px;color:var(--muted);max-width:44em}
+.mode-schueler .timer-btn{display:none}
+body:not(.mode-schueler) #teacherBtnRow{display:none}
 .timer-btn{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-family:var(--f-mono);font-size:.82rem;cursor:pointer;white-space:nowrap}
 .timer-btn:hover{border-color:var(--sun)}
 @media (max-width:640px){ .st-head{grid-template-columns:auto 1fr} .st-head .timer-btn{grid-column:1/-1;justify-self:start} }
@@ -308,10 +311,9 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div>
       <p class="eyebrow">Religion · Klasse 11 · Doppelstunde · Sinn suchen, Gott begegnen</p>
-      <h1>Was brauchst du <em>wirklich</em>?</h1>
-      <p class="lead">Ein Philosoph, der in einem Tonkrug schlief. Ein Popstar, der Stadien gegen eine Klosterzelle tauschte. Und du, mit deinem Rucksack voller Dinge, auf die du nicht verzichten willst. Fünf Stationen, 90 Minuten, keine Namen.</p>
+      <h1>Was brauchst du <em>wirklich</em>? <span class="kuchen">(Außer Kuchen)</span></h1>
+      <p class="lead">Ein Philosoph, der in einem Tonkrug schlief. Ein Popstar, der Stadien gegen eine Klosterzelle tauschte. Und du, mit deinem Rucksack voller Dinge, auf die du nicht verzichten willst. Fünf Stationen, keine Namen.</p>
       <div class="meta">
-        <span class="tag">90 Minuten</span>
         <span class="tag">5 Stationen</span>
         <span class="tag">anonym ausgewertet</span>
       </div>
@@ -391,7 +393,7 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">01</div>
-      <div><p class="eyebrow">Einstieg · 10 Min · Einzelarbeit</p><h2>Mein Rucksack</h2><p>Stell dir vor, du darfst für dein Leben genau einen Rucksack packen. Was muss rein?</p></div>
+      <div><p class="eyebrow">Einstieg · Einzelarbeit</p><h2>Mein Rucksack</h2><p>Stell dir vor, du darfst für dein Leben genau einen Rucksack packen. Was muss rein?</p></div>
       <button class="timer-btn" type="button" data-timer="10">Timer 10:00</button>
     </div>
     <div class="cols">
@@ -419,7 +421,7 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">02</div>
-      <div><p class="eyebrow">Erarbeitung I · 20 Min · Einzel- und Partnerarbeit · M1</p><h2>Diogenes, der Mann im Krug</h2><p>Athen, um 350 v. Chr. Ein Mann lebt auf der Straße, besitzt fast nichts und lacht über die Reichen. Verrückt oder frei?</p></div>
+      <div><p class="eyebrow">Erarbeitung I · Einzel- und Partnerarbeit · M1</p><h2>Diogenes, der Mann im Krug</h2><p>Athen, um 350 v. Chr. Ein Mann lebt auf der Straße, besitzt fast nichts und lacht über die Reichen. Verrückt oder frei?</p></div>
       <button class="timer-btn" type="button" data-timer="20">Timer 20:00</button>
     </div>
     <div class="cols">
@@ -506,7 +508,7 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">03</div>
-      <div><p class="eyebrow">Erarbeitung II · 30 Min · Einzel- und Partnerarbeit · M2</p><h2>Vom Stadion in die Klosterzelle</h2><p>Michael Patrick Kelly, früher „Paddy“ von der Kelly Family. Unsere Bedürfnisse ändern sich im Lauf des Lebens. Bei ihm ziemlich radikal.</p></div>
+      <div><p class="eyebrow">Erarbeitung II · Einzel- und Partnerarbeit · M2</p><h2>Vom Stadion in die Klosterzelle</h2><p>Michael Patrick Kelly, früher „Paddy“ von der Kelly Family. Unsere Bedürfnisse ändern sich im Lauf des Lebens. Bei ihm ziemlich radikal.</p></div>
       <button class="timer-btn" type="button" data-timer="30">Timer 30:00</button>
     </div>
 
@@ -569,7 +571,7 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">04</div>
-      <div><p class="eyebrow">Vertiefung · 15 Min · Partnerarbeit und Plenum · M1, Aufgabe 4</p><h2>Die Diogenes-Challenge</h2><p>Zurück zu deinem Rucksack. Der Krug ist eng: Nur drei Dinge passen hinein.</p></div>
+      <div><p class="eyebrow">Vertiefung · Partnerarbeit und Plenum · M1, Aufgabe 4</p><h2>Die Diogenes-Challenge</h2><p>Zurück zu deinem Rucksack. Der Krug ist eng: Nur drei Dinge passen hinein.</p></div>
       <button class="timer-btn" type="button" data-timer="15">Timer 15:00</button>
     </div>
     <div class="cols">
@@ -608,7 +610,7 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">05</div>
-      <div><p class="eyebrow">Sicherung · 15 Min · Einzelarbeit und Plenum</p><h2>Halt oder Abhängigkeit?</h2><p>Eine letzte Frage, dann zwei Sätze, und ihr seid fertig. Danach schauen wir gemeinsam auf das, was die Klasse denkt.</p></div>
+      <div><p class="eyebrow">Sicherung · Einzelarbeit und Plenum</p><h2>Halt oder Abhängigkeit?</h2><p>Eine letzte Frage, dann zwei Sätze, und ihr seid fertig. Danach schauen wir gemeinsam auf das, was die Klasse denkt.</p></div>
       <button class="timer-btn" type="button" data-timer="15">Timer 15:00</button>
     </div>
     <div class="quote">Diogenes würde sagen: Wer einen Fels außerhalb seiner selbst braucht, ist nicht frei.<small>Wie würdest du ihm antworten?</small></div>
@@ -646,6 +648,7 @@ input,textarea,select{font-size:max(16px,1em)}
 </main>
 
 <div class="wrap">
+  <div class="row" id="teacherBtnRow" style="padding-top:28px"><button type="button" class="btn btn-ghost btn-sm" id="toTeacher">Lehrkraft-Ansicht</button></div>
   <footer>Grundlage: RAAbits Religion 74, I.A.33 „Mensch sein – Mensch werden“, M1 und M2. Interview: Astrid-Maria Bock, „Ich bin Paddy Kelly, und mich kennt keine Sau!“, <a href="https://www.welt.de/vermischtes/article140618776/Ich-bin-Paddy-Kelly-und-mich-kennt-keine-Sau.html" target="_blank" rel="noopener">welt.de</a>. Bibelstellen sinngemäß wiedergegeben.</footer>
 </div>
 
@@ -3491,13 +3494,14 @@ $('#resetWrap').addEventListener('click', async e => {
 });
 
 function setMode(m){
-  mode=m; LS.set('sinn.mode',m);
+  mode=m; LS.set('sinn.mode',m); document.body.classList.toggle('mode-schueler', m!=='lehrer');
   $('#controlKlasse').hidden = m!=='lehrer'; $('#controlSolo').hidden = m==='lehrer';
   history.replaceState(null,'', m==='lehrer' ? '?lehrer' : location.pathname);
   for(const k in revealed) delete revealed[k];
   renderAll(); if(m==='lehrer') fetchResults();
 }
 $('#toStudent').addEventListener('click', () => setMode('schueler'));
+$('#toTeacher').addEventListener('click', () => { setMode('lehrer'); window.scrollTo({top:0}); });
 
 document.addEventListener('click', e => {
   const r=e.target.closest('[data-reveal]'); if(r){ revealed[r.dataset.reveal]=true; renderResults(); return; }
