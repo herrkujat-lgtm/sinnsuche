@@ -1,0 +1,10 @@
+{
+  "name": "was-brauchst-du-wirklich",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interaktive Religions-Doppelstunde (Klasse 11) mit anonymer Live-Auswertung",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "8.2.0"
+  }
+}
