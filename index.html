@@ -237,11 +237,12 @@ details summary{cursor:pointer;font-weight:700}
 
 /* Bible cards */
 .texts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.task .text{max-width:40em}
 .text{background:var(--surface);border-radius:var(--r);padding:18px;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
 .text .ref{font-family:var(--f-mono);font-size:.78rem;color:var(--sun-ink);letter-spacing:.05em}
 .text p{font-family:var(--f-display);font-size:1.2rem;font-weight:600;line-height:1.25}
 .text small{color:var(--muted);font-size:.86rem}
-@media (max-width:860px){ .texts{grid-template-columns:1fr} }
+@media (max-width:860px){ .texts{grid-template-columns:1fr!important} }
 
 /* Code */
 .codebox{font-family:var(--f-mono);font-size:.8rem;word-break:break-all;min-height:70px}
@@ -492,10 +493,6 @@ input,textarea,select{font-size:max(16px,1em)}
       <div id="res2d"></div>
     </div>
 
-    <div class="aside" style="margin-top:48px">
-      <p class="eyebrow">Noch eine Anekdote</p>
-      <p style="margin-top:6px">Am hellen Tag soll Diogenes mit einer brennenden Laterne über den Marktplatz gegangen sein. Auf die Frage, was er da tue, sagte er: „Ich suche einen Menschen.“ <span class="muted">Was meint er damit, wenn doch überall Leute herumlaufen?</span></p>
-    </div>
   </div>
 </section>
 
@@ -504,8 +501,8 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">03</div>
-      <div><p class="eyebrow">Erarbeitung II · 25 Min · Einzel- und Partnerarbeit · M2</p><h2>Vom Stadion in die Klosterzelle</h2><p>Michael Patrick Kelly, früher „Paddy“ von der Kelly Family. Unsere Bedürfnisse ändern sich im Lauf des Lebens. Bei ihm ziemlich radikal.</p></div>
-      <button class="timer-btn" type="button" data-timer="25">Timer 25:00</button>
+      <div><p class="eyebrow">Erarbeitung II · 30 Min · Einzel- und Partnerarbeit · M2</p><h2>Vom Stadion in die Klosterzelle</h2><p>Michael Patrick Kelly, früher „Paddy“ von der Kelly Family. Unsere Bedürfnisse ändern sich im Lauf des Lebens. Bei ihm ziemlich radikal.</p></div>
+      <button class="timer-btn" type="button" data-timer="30">Timer 30:00</button>
     </div>
 
     <p class="eyebrow" style="margin-bottom:12px">Lebenslinie · nach dem Interview in M2 (Welt, 2015) · zum Wischen</p>
@@ -540,9 +537,24 @@ input,textarea,select{font-size:max(16px,1em)}
       </div>
       <div id="res3"></div>
     </div>
-    <div class="aside" style="margin-top:40px">
-      <p class="eyebrow">Recherche-Auftrag · optional</p>
-      <p style="margin-top:6px">Das Interview stammt von 2015. Finde heraus, was Michael Patrick Kelly seitdem gemacht hat. Passt das zu dem, was er damals über Glück gesagt hat?</p>
+    <div style="margin-top:72px">
+      <div class="quote">Den inneren Frieden aus dem Kloster nennt Kelly den Fels, auf den er sein Leben bauen will.<small>M2, Z. 38–39</small></div>
+    </div>
+    <div class="cols" style="margin-top:36px">
+      <div class="task" style="margin:0">
+        <p class="eyebrow">Aufgabe 4 · Fels oder Sand?</p>
+        <h3>Worauf baust du?</h3>
+        <div class="text"><span class="ref">Mt 7,24–27 · sinngemäß</span><p>Wer Jesu Worte hört und danach lebt, baut sein Haus auf Fels. Regen, Flut und Sturm kommen, doch das Haus bleibt stehen. Wer sie hört und nicht danach lebt, baut auf Sand, und das Haus stürzt ein.</p></div>
+        <p class="q">Bei Kelly brach vieles weg, worauf er gebaut hatte. Und bei dir? Entscheide für die Dinge aus deinem Rucksack: Fels oder Sand?</p>
+        <div class="check" id="felsList"></div>
+        <div class="row"><button class="btn" type="button" id="submit3f">Abgeben</button><button class="btn btn-ghost btn-sm" type="button" id="felsHilfeBtn" aria-expanded="false">Deutungshilfe</button></div>
+        <div class="reveal-box" id="felsHilfe" hidden>
+          <p><b>Gott als Fels:</b> In der Bibel ist der Fels oft Gott selbst („Herr, mein Fels“, Ps 18,3; Ps 62). Bei Jesus heißt auf Fels bauen: sein Wort hören und danach leben. Fels ist also eine Beziehung, kein Besitz und kein Gefühl.</p>
+          <p style="margin-top:8px"><b>Diogenes und Kelly:</b> Diogenes baut auf sich selbst, er will niemanden brauchen. Kelly findet seinen Halt außerhalb seiner selbst, als etwas Geschenktes, nicht als Leistung.</p>
+          <p style="margin-top:8px"><b>Und die Menschen?</b> Freunde und Familie sind kein Sand. Aber Kelly hat erlebt, dass auch sie zerbrechen können. Christliche Hoffnung ist ein Grund, der auch dann noch trägt.</p>
+        </div>
+      </div>
+      <div id="res3f"></div>
     </div>
   </div>
 </section>
@@ -552,8 +564,8 @@ input,textarea,select{font-size:max(16px,1em)}
   <div class="wrap">
     <div class="st-head">
       <div class="st-num">04</div>
-      <div><p class="eyebrow">Vertiefung · 20 Min · Partnerarbeit und Plenum · M1, Aufgabe 4</p><h2>Die Diogenes-Challenge</h2><p>Zurück zu deinem Rucksack. Der Krug ist eng: Nur drei Dinge passen hinein.</p></div>
-      <button class="timer-btn" type="button" data-timer="20">Timer 20:00</button>
+      <div><p class="eyebrow">Vertiefung · 15 Min · Partnerarbeit und Plenum · M1, Aufgabe 4</p><h2>Die Diogenes-Challenge</h2><p>Zurück zu deinem Rucksack. Der Krug ist eng: Nur drei Dinge passen hinein.</p></div>
+      <button class="timer-btn" type="button" data-timer="15">Timer 15:00</button>
     </div>
     <div class="cols">
       <div class="task" style="margin:0">
@@ -568,7 +580,7 @@ input,textarea,select{font-size:max(16px,1em)}
       <div id="res4"></div>
     </div>
 
-    <div class="cols" style="margin-top:56px">
+    <div style="margin-top:56px;max-width:640px">
       <div class="task" style="margin:0">
         <p class="eyebrow">Aufgabe 2 · Vergleich</p>
         <h3>Diogenes, Kelly – oder beide?</h3>
@@ -576,21 +588,11 @@ input,textarea,select{font-size:max(16px,1em)}
         <div class="check" id="sortDK"></div>
         <div class="row"><button class="btn btn-sea btn-sm" type="button" id="sortCheck">Prüfen</button><span id="sortScore" class="counter"></span></div>
       </div>
-      <div class="task" style="margin:0">
-        <p class="eyebrow">Aufgabe 3 · Gesprächsimpuls</p>
-        <h3>Verzicht ist nicht gleich Verzicht.</h3>
-        <div class="prose">
-          <p>Diogenes verzichtet, um <b>unabhängig</b> zu sein. Er will niemanden brauchen, nicht einmal einen Becher.</p>
-          <p>Kelly verzichtet, um <b>etwas zu finden</b>: den Frieden, der ihm bei allem Erfolg fehlte. Und er kehrt zurück, als er merkt, dass sein Weg mit Gott auch durch Musik, Ehe und Bühne führen kann.</p>
-          <p class="muted">Welcher Verzicht spricht dich mehr an? Kann Verzicht auch falsch sein?</p>
-        </div>
-      </div>
     </div>
 
     <p class="eyebrow" style="margin:56px 0 14px">Und was sagt die Bibel? · sinngemäß wiedergegeben</p>
-    <div class="texts">
+    <div class="texts" style="grid-template-columns:repeat(2,minmax(0,1fr))">
       <div class="text"><span class="ref">Lk 9,3</span><p>Jesus schickt seine Jünger los: kein Stab, keine Tasche, kein Brot, kein Geld.</p><small>Ein Auftrag ohne Rucksack. Was trägt dann?</small></div>
-      <div class="text"><span class="ref">Mt 6,19–21</span><p>Sammelt keine Schätze, die Motten und Rost zerfressen. Wo dein Schatz ist, da ist auch dein Herz.</p><small>Wo hängt dein Herz, wenn du auf deine drei Dinge schaust?</small></div>
       <div class="text"><span class="ref">Augustinus, Bekenntnisse I,1</span><p>Unruhig ist unser Herz, bis es ruht in dir.</p><small>Passt das zu Kellys „Leere“ und „Sehnsucht“?</small></div>
     </div>
   </div>
@@ -630,8 +632,8 @@ input,textarea,select{font-size:max(16px,1em)}
         <tbody>
           <tr><td>0–10</td><td>Einstieg</td><td>Hero-Impuls „Geh mir aus der Sonne“, Station 1: zehn Dinge für den Rucksack, Klassenauswertung aufdecken</td><td>EA, Plenum</td><td>Station 1 · M1 Aufg. 1</td></tr>
           <tr><td>10–30</td><td>Erarbeitung I</td><td>Bild und Infotext Diogenes, Diogenes-Test, Rollentausch mit Alexander, Deutung der Anekdote, Empfehlungen für heute</td><td>EA, PA, UG</td><td>Station 2 · M1 Aufg. 2–3</td></tr>
-          <tr><td>30–55</td><td>Erarbeitung II</td><td>Lebenslinie Michael Patrick Kelly, Steckbrief, Gründe für den Klostereintritt, eigene Position</td><td>EA, PA</td><td>Station 3 · M2</td></tr>
-          <tr><td>55–75</td><td>Vertiefung</td><td>Diogenes-Challenge (drei Dinge), Vergleich Start/Ende, Diogenes vs. Kelly, biblische Impulse</td><td>PA, UG</td><td>Station 4 · M1 Aufg. 4</td></tr>
+          <tr><td>30–60</td><td>Erarbeitung II</td><td>Lebenslinie Michael Patrick Kelly, Steckbrief, Gründe für den Klostereintritt, eigene Position; Kellys „Fels“ und Mt 7,24–27: Fels oder Sand?</td><td>EA, PA, UG</td><td>Station 3 · M2</td></tr>
+          <tr><td>60–75</td><td>Vertiefung</td><td>Diogenes-Challenge (drei Dinge), Vergleich Start/Ende, Diogenes vs. Kelly, Lk 9,3 und Augustinus</td><td>PA, UG</td><td>Station 4 · M1 Aufg. 4</td></tr>
           <tr><td>75–90</td><td>Sicherung</td><td>Exit-Ticket, Wortwolke, Denkimpulse der Klasse im Plenum besprechen</td><td>EA, Plenum</td><td>Station 5</td></tr>
         </tbody>
       </table>
@@ -666,6 +668,15 @@ input,textarea,select{font-size:max(16px,1em)}
           <li>Freitexte erscheinen erst nach dem Aufdecken. Überfliege sie kurz, bevor du sie zeigst.</li>
         </ul>
         <div class="row" style="margin-top:12px"><button type="button" class="btn btn-sea btn-sm" id="toTeacher">Lehrkraft-Ansicht öffnen</button></div>
+      </div>
+      <div>
+        <h4>Kellys „Fels“ · theologische Deutung</h4>
+        <ul>
+          <li>Kelly zitiert unausgesprochen Mt 7,24–27: Vorher Sand (Ruhm, Erfolg, heile Familienwelt), dann Sturm (Tod des Vaters, Zerfall, Leere), jetzt Fels (Frieden mit Gott).</li>
+          <li>Biblisch ist der Fels Gott selbst (Ps 18,3; Ps 62). Auf Fels bauen heißt bei Jesus: hören und tun, also Beziehung.</li>
+          <li>Pointe: Diogenes sucht Halt in Autarkie, Kelly im Getragenwerden. Christlicher Verzicht macht frei für Gott und den Nächsten.</li>
+          <li>Überleitung zu Station 4: Sind die drei Dinge im Krug Fels oder Sand?</li>
+        </ul>
       </div>
       <div>
         <h4>Mögliche Hausaufgabe</h4>
@@ -3046,7 +3057,7 @@ const LS = {
   set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 };
 const API = '/api';
-const emptyPool = () => ({rucksack:[],custom:[],verzicht:[],alexander:[],deutung:[],kelly:[],challenge:[],exit:[]});
+const emptyPool = () => ({rucksack:[],custom:[],verzicht:[],alexander:[],deutung:[],kelly:[],fels:[],challenge:[],exit:[]});
 function rand(n){ const a='abcdefghijkmnpqrstuvwxyz23456789'; const b=new Uint8Array(n); (window.crypto||{getRandomValues:x=>x.map(()=>Math.random()*255|0)}).getRandomValues(b); return [...b].map(x=>a[x%a.length]).join(''); }
 
 const qs = new URLSearchParams(location.search);
@@ -3136,6 +3147,7 @@ function buildPool(entries){
     if(station==='s2d' && [0,1,2,3].includes(o.d)) p.deutung.push(o.d);
     if(station==='s3' && [1,2,3,4,5].includes(o.k)) p.kelly.push({k:o.k, g:str(o.g,280)});
     if(station==='s4'){ const c=ids(o.c,3); if(c.length) p.challenge.push(c); }
+    if(station==='s3f'){ const f=ids(o.f,12), sd=ids(o.s,12).filter(id=>!f.includes(id)); if(f.length||sd.length) p.fels.push({f, s:sd}); }
     if(station==='s5' && str(o.b,200)) p.exit.push({b:str(o.b,200), l:str(o.l,200)});
   }
   return p;
@@ -3176,7 +3188,7 @@ $('#custom1Btn').addEventListener('click', addCustom1);
 $('#custom1').addEventListener('keydown', e => { if(e.key==='Enter'){ e.preventDefault(); addCustom1(); } });
 $('#submit1').addEventListener('click', () => {
   if(pick1.size+custom1.length===0){ toast('Pack zuerst etwas in deinen Rucksack.'); return; }
-  me.r=[...pick1]; me.x=[...custom1]; saveMe(); send('s1',{r:me.r,x:me.x}); renderResults();
+  me.r=[...pick1]; me.x=[...custom1]; saveMe(); send('s1',{r:me.r,x:me.x}); render3f(); renderResults();
 });
 
 /* ---------- Station 2 ---------- */
@@ -3256,6 +3268,22 @@ function renderDK(checked){
 $('#sortDK').addEventListener('click', e => { const b=e.target.closest('[data-dk]'); if(!b) return; const i=+b.dataset.dk; const seq=[null,'D','K','B']; dk[i]=seq[(seq.indexOf(dk[i])+1)%4] || 'D'; $('#sortScore').textContent=''; renderDK(false); });
 $('#sortCheck').addEventListener('click', () => { if(dk.some(v=>!v)){ toast('Ordne jede Aussage zu.'); return; } renderDK(true); });
 
+/* ---------- Station 3 · Fels oder Sand ---------- */
+const FELS_DEFAULT = ['fa','fr','ha','ge','gs','gl','mu','zu'];
+function felsFromMe(){ const o={}; (me.ff||[]).forEach(id=>o[id]='F'); (me.fs||[]).forEach(id=>o[id]='S'); return o; }
+let fels = felsFromMe();
+function render3f(){
+  const list = (me.r && me.r.length) ? me.r.filter(id=>ITEM[id]) : FELS_DEFAULT;
+  $('#felsList').innerHTML = (me.r && me.r.length ? '' : '<p class="muted" style="font-size:.88rem">Noch kein Rucksack gepackt, deshalb ein paar Beispiele:</p>') + list.map(id=>`<div class="it"><span>${esc(ITEM[id].label)}</span><span class="opts" role="group" aria-label="${esc(ITEM[id].label)}"><button type="button" data-fels="${id}" data-v="F" aria-pressed="${fels[id]==='F'}">Fels</button><button type="button" data-fels="${id}" data-v="S" aria-pressed="${fels[id]==='S'}">Sand</button></span></div>`).join('');
+}
+$('#felsList').addEventListener('click', e => { const b=e.target.closest('[data-fels]'); if(!b) return; const id=b.dataset.fels; fels[id] = fels[id]===b.dataset.v ? undefined : b.dataset.v; render3f(); });
+$('#submit3f').addEventListener('click', () => {
+  const f=Object.keys(fels).filter(id=>fels[id]==='F'), sd=Object.keys(fels).filter(id=>fels[id]==='S');
+  if(!f.length && !sd.length){ toast('Ordne mindestens ein Ding zu.'); return; }
+  me.ff=f; me.fs=sd; saveMe(); send('s3f',{f,s:sd}); renderResults();
+});
+$('#felsHilfeBtn').addEventListener('click', e => { const h=$('#felsHilfe'); h.hidden=!h.hidden; e.target.setAttribute('aria-expanded', !h.hidden); });
+
 /* ---------- Station 5 ---------- */
 $('#exitB').value = me.b || ''; $('#exitL').value = me.l || '';
 $('#submit5').addEventListener('click', () => {
@@ -3288,6 +3316,13 @@ const IMP = {
   r2d(p){ const N=p.deutung.length; if(!N) return ''; const c=[0,0,0,0]; p.deutung.forEach(d=>c[d]++); const i=c.indexOf(Math.max(...c)); return `Die meisten (${pct(c[i],N)} %) wählen Deutung ${'ABCD'[i]}. Wer hat eine andere gewählt, und warum?`; },
   r3(p){ const N=p.kelly.length; if(!N) return ''; const avg=p.kelly.reduce((a,x)=>a+x.k,0)/N; const hi=pct(p.kelly.filter(x=>x.k>=4).length,N), lo=pct(p.kelly.filter(x=>x.k<=2).length,N);
     return `Durchschnitt ${avg.toFixed(1).replace('.',',')} von 5. ${hi} % können Kelly gut verstehen, ${lo} % kaum. ` + (lo>=30 ? 'Hört euch die Begründungen der anderen Seite an: Was übersieht man von außen?' : 'Würdet ihr selbst so weit gehen? Was müsste passieren?'); },
+  r3f(p){ const N=p.fels.length; if(!N) return ''; const F={},S={}; p.fels.forEach(e=>{ e.f.forEach(id=>F[id]=(F[id]||0)+1); e.s.forEach(id=>S[id]=(S[id]||0)+1); });
+    const rows=[...new Set([...Object.keys(F),...Object.keys(S)])].map(id=>({id,f:F[id]||0,s:S[id]||0})).filter(r=>r.f+r.s>=Math.max(2,Math.ceil(N*0.2)));
+    if(!rows.length) return '';
+    const fels=rows.slice().sort((a,b)=>b.f/(b.f+b.s)-a.f/(a.f+a.s)||b.f-a.f)[0], sand=rows.slice().sort((a,b)=>b.s/(b.f+b.s)-a.s/(a.f+a.s)||b.s-a.s)[0];
+    let t=`Am ehesten Fels: „${esc(ITEM[fels.id].label)}“ (${pct(fels.f,fels.f+fels.s)} %). Am ehesten Sand: „${esc(ITEM[sand.id].label)}“ (${pct(sand.s,sand.f+sand.s)} %). `;
+    const g=rows.find(r=>r.id==='gl'); t+= g ? `„Glaube & Gott“ nennen ${pct(g.f,g.f+g.s)} % einen Fels. Was müsste geschehen, damit er für die anderen einer wird?` : 'Glaube und Gott hat kaum jemand eingeordnet. Ist er für euch Fels, Sand oder gar nicht im Rucksack?';
+    return t; },
   r4(p){ const N=p.rucksack.length, M=p.challenge.length; if(!N||!M) return ''; const s=countIds(p.rucksack), e=countIds(p.challenge);
     const rows=Object.keys(s).filter(id=>s[id]>=Math.max(2,N*0.25)).map(id=>({id, a:s[id]/N, b:(e[id]||0)/M}));
     if(!rows.length) return '';
@@ -3347,6 +3382,18 @@ function res3(){
   if(!me.k) return '';
   return block('r3','Deine Meinung',1,()=>`<p style="font-family:var(--f-display);font-size:2.4rem;font-weight:800">${me.k}<span class="muted" style="font-size:1rem"> / 5</span></p>${me.g?`<div class="note">${esc(me.g)}</div>`:''}${impulse(me.k>=4?'Du verstehst ihn. Gibt es etwas in deinem Leben, für das du so radikal umsteuern würdest?':me.k<=2?'Du verstehst ihn kaum. Was hätte er stattdessen tun können, um seine Leere zu füllen?':'Teils, teils. Welcher Teil seiner Entscheidung überzeugt dich, welcher nicht?')}`);
 }
+function res3f(){
+  if(T()){ const N=pool.fels.length;
+    return block('r3f','Fels oder Sand',N,()=>{ if(!N) return `<p class="empty">Noch keine Antworten.</p>`;
+      const F={},S={}; pool.fels.forEach(e=>{ e.f.forEach(id=>F[id]=(F[id]||0)+1); e.s.forEach(id=>S[id]=(S[id]||0)+1); });
+      const rows=[...new Set([...Object.keys(F),...Object.keys(S)])].map(id=>({id,f:F[id]||0,s:S[id]||0})).sort((a,b)=>(b.f+b.s)-(a.f+a.s)).slice(0,10);
+      return `<div class="legend"><span style="--lc:var(--sea)">Fels</span><span style="--lc:var(--sun)">Sand</span></div><div class="bars">${rows.map(r=>{ const n=r.f+r.s; return `<div class="bar"><span class="t">${esc(ITEM[r.id].label)}</span><span class="track" style="height:14px"><span style="width:${pct(r.f,n)}%;background:var(--sea)"></span><span style="width:${pct(r.s,n)}%;background:var(--sun)"></span></span><span class="v">${pct(r.f,n)}%</span></div>`; }).join('')}</div><p class="muted" style="font-size:.85rem">Zahl rechts: Anteil „Fels“</p>${impulse(IMP.r3f(pool))}`; });
+  }
+  if(!me.ff) return '';
+  return block('r3f','Fels oder Sand',1,()=>{ const f=me.ff||[], sd=me.fs||[];
+    const t = f.includes('gl') ? 'Du nennst Glauben einen Fels, wie Kelly. Woran merkst du im Alltag, dass er dich trägt?' : f.length>sd.length ? `${f.length} deiner Dinge sind für dich Fels. Was davon könnte trotzdem einmal wegbrechen, so wie bei Kelly die heile Familienwelt?` : `Viel Sand in deinem Rucksack. Wo findest du Halt, wenn der Sturm kommt?`;
+    return `<div class="chips">${f.map(id=>`<span class="tag" style="border-color:var(--sea)">Fels · ${esc(ITEM[id].label)}</span>`).join('')}${sd.map(id=>`<span class="tag" style="border-color:var(--sun)">Sand · ${esc(ITEM[id].label)}</span>`).join('')}</div>${impulse(t)}`; });
+}
 function res4(){
   if(T()){ const N=pool.rucksack.length, M=pool.challenge.length;
     return block('r4','Vorher – nachher',M,()=>{ if(!M) return `<p class="empty">Noch keine Challenge abgegeben.</p>`;
@@ -3371,7 +3418,7 @@ function res5(){
 function renderImpulses(){
   const el=$('#impulses');
   if(!T()){ el.innerHTML=''; return; }
-  const list=[['Rucksack',IMP.r1(pool)],['Diogenes-Test',IMP.r2v(pool)],['Deutung',IMP.r2d(pool)],['Kelly',IMP.r3(pool)],['Vorher – nachher',IMP.r4(pool)],['Exit',IMP.r5(pool)]].filter(x=>x[1]);
+  const list=[['Rucksack',IMP.r1(pool)],['Diogenes-Test',IMP.r2v(pool)],['Deutung',IMP.r2d(pool)],['Kelly',IMP.r3(pool)],['Fels oder Sand',IMP.r3f(pool)],['Vorher – nachher',IMP.r4(pool)],['Exit',IMP.r5(pool)]].filter(x=>x[1]);
   const total = Object.values(pool).reduce((a,v)=>a+(Array.isArray(v)?v.length:0),0) - pool.custom.length;
   el.innerHTML = `<div class="panel" style="display:flex;flex-direction:column;gap:14px"><div class="res-head"><div><p class="eyebrow">Plenum</p><h3 style="font-size:1.8rem;margin-top:4px">Denkimpulse der Klasse</h3></div><span class="counter">${total} Abgaben</span></div>
     ${!revealed.imp ? `<div class="row"><button type="button" class="btn btn-sea" data-reveal="imp" ${list.length?'':'disabled'}>${list.length?'Denkimpulse aufdecken':'Impulse erscheinen, sobald Antworten da sind'}</button></div>` :
@@ -3391,6 +3438,7 @@ function demoPool(){
     p.verzicht.push([rnd()<.45?2:rnd()<.7?1:0, rnd()<.2?2:rnd()<.6?1:0, rnd()<.3?2:1, rnd()<.15?2:rnd()<.5?1:0, rnd()<.35?2:1, rnd()<.1?2:rnd()<.5?1:0]);
     p.deutung.push(rnd()<.35?0:rnd()<.55?1:rnd()<.8?2:3);
   }
+  p.rucksack.forEach(r=>{ const f=[],sd=[]; r.forEach(id=>{ const c=ITEM[id].cat, x=rnd(); ((c==='b'||c==='s')?x<.8:c==='m'?x<.15:x<.45) ? f.push(id) : sd.push(id); }); p.fels.push({f,s:sd}); });
   p.custom=['Gitarre','mein Bett','Kaffee','Hoffnung'];
   p.alexander=['Ein Jahr ohne Schule und trotzdem Abi.','Dass meine Oma wieder gesund wird.','Ehrlich? Geld. Dann wäre vieles leichter.','Zeit. Einfach mehr Zeit.','Nichts. Ich will nicht, dass mir jemand was schuldet.','Frieden für die Welt, klingt kitschig, ist aber so.','Einen Platz, an dem ich nicht perfekt sein muss.'];
   p.kelly=[{k:4,g:'Wenn alles laut ist, braucht man vielleicht das komplette Gegenteil.'},{k:2,g:'Sechs Jahre sind krass lang. Das ginge auch mit einem Sabbatjahr.'},{k:5,g:'Er hatte alles und war trotzdem leer. Das sagt viel.'},{k:3,g:'Mutig, aber ein bisschen Flucht war es auch.'},{k:4,g:''},{k:1,g:'Ich könnte nie auf Freunde und Handy verzichten.'},{k:4,g:'Er hat herausgefunden, was ihm wirklich wichtig ist.'},{k:3,g:''},{k:5,g:''},{k:2,g:''}];
@@ -3399,7 +3447,7 @@ function demoPool(){
 }
 
 /* ---------- Modus & Steuerpult ---------- */
-const STN = [['s1','01 Rucksack','rucksack'],['s2v','02 Test','verzicht'],['s2a','02 Alexander','alexander'],['s2d','02 Deutung','deutung'],['s3','03 Kelly','kelly'],['s4','04 Krug','challenge'],['s5','05 Exit','exit']];
+const STN = [['s1','01 Rucksack','rucksack'],['s2v','02 Test','verzicht'],['s2a','02 Alexander','alexander'],['s2d','02 Deutung','deutung'],['s3','03 Kelly','kelly'],['s3f','03 Fels','fels'],['s4','04 Krug','challenge'],['s5','05 Exit','exit']];
 const baseLink = () => location.origin + location.pathname;
 const hhmm = d => d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});
 function renderStatus(){
@@ -3427,7 +3475,7 @@ function renderBars(){
   renderStatus(); renderCounts();
 }
 function restoreInputs(){
-  pick1=new Set(me.r||[]); custom1=[...(me.x||[])]; verz=me.z?[...me.z]:Array(6).fill(null); deut=me.d??null; kVal=me.k||null; pick4=new Set(me.c||[]);
+  pick1=new Set(me.r||[]); custom1=[...(me.x||[])]; verz=me.z?[...me.z]:Array(6).fill(null); deut=me.d??null; kVal=me.k||null; fels=felsFromMe(); pick4=new Set(me.c||[]);
   $('#alexTxt').value=me.a||''; $('#kTxt').value=me.g||''; $('#exitB').value=me.b||''; $('#exitL').value=me.l||'';
 }
 $('#copyLink').addEventListener('click', () => { const t=baseLink(); try{ navigator.clipboard.writeText(t).then(()=>toast('Link kopiert.'),()=>toast(t)); }catch(e){ toast(t); } });
@@ -3467,9 +3515,9 @@ document.addEventListener('click', e => {
 /* ---------- Render ---------- */
 function renderResults(){
   $('#res1').innerHTML=res1(); $('#res2v').innerHTML=res2v(); $('#res2a').innerHTML=res2a(); $('#res2d').innerHTML=res2d();
-  $('#res3').innerHTML=res3(); $('#res4').innerHTML=res4(); $('#res5').innerHTML=res5(); renderImpulses(); renderCounts();
+  $('#res3').innerHTML=res3(); $('#res3f').innerHTML=res3f(); $('#res4').innerHTML=res4(); $('#res5').innerHTML=res5(); renderImpulses(); renderCounts();
 }
-function renderAll(){ render1(); render2(); render4(); renderScale(); renderBars(); renderResults(); }
+function renderAll(){ render1(); render2(); render3f(); render4(); renderScale(); renderBars(); renderResults(); }
 
 renderGr(false); renderDK(false);
 setMode(mode==='lehrer'?'lehrer':'schueler');
