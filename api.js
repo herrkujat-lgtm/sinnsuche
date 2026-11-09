@@ -4,7 +4,7 @@
 // Konten oder IP-Adressen gespeichert.
 import { getStore } from "@netlify/blobs";
 
-const STATIONS = new Set(["s1", "s2v", "s2a", "s2d", "s3", "s3f", "s4", "s5"]);
+const STATIONS = new Set(["s1", "s2v", "s2a", "s2d", "s3", "s3f", "s4", "s5h", "s5"]);
 const SID = /^[A-Za-z0-9]{8,40}$/;
 const RID = /^[a-z0-9]{4,24}$/;
 
